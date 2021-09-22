@@ -3,8 +3,10 @@ import 'package:bmi_calculator/reusable_card.dart';
 import 'package:bmi_calculator/round_icon_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'bottom_tray_button.dart';
 import 'constants.dart';
 import 'counter_content.dart';
 
@@ -160,11 +162,11 @@ class _InputPageState extends State<InputPage> {
               ],
             ),
           ),
-          Container(
-            color: kBottomContainerColor,
-            margin: EdgeInsets.only(top: 10.0),
-            width: double.infinity,
-            height: kBottomContainerHeight,
+          BottomTrayButton(
+            label: 'CALCULATE',
+            onTap: () {
+              Navigator.pushNamed(context, '/results');
+            },
           ),
         ],
       ),
