@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 const kBottomContainerHeight = 80.0;
 const kBottomContainerColor = Color(0xFFEB1555);
@@ -13,4 +14,9 @@ const TextStyle kLabelTextStyle = TextStyle(
 const TextStyle kBoldTextStyle = TextStyle(
   fontSize: 50.0,
   fontWeight: FontWeight.w900,
+);
+
+const TextStyle kLargeTextStyle = TextStyle(
+  fontSize: 23.0,
+  fontWeight: FontWeight.bold,
 );
