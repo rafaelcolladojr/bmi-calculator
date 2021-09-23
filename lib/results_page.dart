@@ -6,7 +6,14 @@ import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
 
 class ResultsPage extends StatelessWidget {
-  const ResultsPage({Key? key}) : super(key: key);
+  const ResultsPage({
+    Key? key,
+    required this.bmi,
+    required this.bmiLabel,
+    required this.bmiMessage,
+  }) : super(key: key);
+
+  final String bmi, bmiLabel, bmiMessage;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +43,7 @@ class ResultsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    'OVERWEIGHT',
+                    bmiLabel.toUpperCase(),
                     style: TextStyle(
                       color: Colors.green,
                       fontSize: 23.0,
@@ -44,14 +51,14 @@ class ResultsPage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    '26.7',
+                    bmi,
                     style: TextStyle(
                       fontSize: 100,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
-                    'You have a higher than normal body weight. Try to exercise more.',
+                    bmiMessage,
                     style: TextStyle(
                       fontSize: 20.0,
                     ),

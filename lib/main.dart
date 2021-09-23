@@ -22,11 +22,7 @@ class BMICalculator extends StatelessWidget {
           bodyText2: TextStyle(color: Colors.white),
         ),
       ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => InputPage(),
-        '/results': (context) => ResultsPage(),
-      },
+      home: InputPage(),
     );
   }
 }
